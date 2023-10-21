@@ -1,41 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Styles for the main header */
 .mainHeader {
   width: 500px;
   margin: 10px auto;
@@ -43,26 +6,75 @@
   border-radius: 40px;
   padding: 10px;
 }
+
 .mainHeader h1 {
   text-align: center;
   color: #ffffff;
 }
+
+/* Styles for the main form container */
 .mainFormDiv {
   text-align: center;
 }
+
+/* Styles for the input field */
 .mainInput {
   width: 300px;
   background-color: #000;
   padding: 10px;
   font-size: 15px;
-  border: #000;
+  border: 1px solid #000; /* Corrected border property */
   border-radius: 20px 0 0 20px;
   color: white;
 }
+
+/* Styles for the "Add" button */
 .addBtn {
   padding: 10px;
   font-size: 15px;
-  border: #000;
-  border-radius: 0px 20px 20px 0px;
+  border: 1px solid #000; /* Corrected border property */
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
+}
+
+/* Styles for list items (todos) */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7; /* Background color for list items */
+  transition: background-color 0.3s; /* Hover effect transition */
+}
+
+/* Styles for the "Edit" button */
+li button.editBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Styles for the "Remove" button */
+li button.removeBtn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for list items */
+li:hover {
+  background-color: #e0e0e0; /* Background color on hover */
 }

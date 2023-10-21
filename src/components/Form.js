@@ -1,16 +1,18 @@
 import React from 'react';
 
-function Form({ input, addInput, todos, setTodos }) {
+function Form({ input, setInput, todos, setTodos }) {
   const setNewInput = (event) => {
-    addInput(event.target.value);
+    setInput(event.target.value);
   };
 
   const mainForm = (e) => {
     e.preventDefault();
+    if (input.trim() !== '') {
+      setTodos([...todos, input]);
+      setInput('');
+    }
   };
-  function addTodo() {
-    return setTodos([...todos, input]);
-  }
+
   return (
     <form onSubmit={mainForm}>
       <div className="mainFormDiv">
@@ -20,7 +22,7 @@ function Form({ input, addInput, todos, setTodos }) {
           value={input}
           onChange={setNewInput}
         />
-        <button className="addBtn" onClick={addTodo}>
+        <button type="submit" className="addBtn">
           Add
         </button>
       </div>
